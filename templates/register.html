@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+<!-- Form base from CS50 Finance -->
+
+{% block main %}
+    <div class="form1">
+        <h3 class="regTitle">Register</h3>
+        <form action="/register" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+            </div>
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="email" name="email" placeholder="Email" type="email">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" id="confPassword" name="confirm" placeholder="Confirm-Password" type="password">
+            </div>
+            <button class="btn btn-primary" type="submit">Register</button>
+            <p class="passpar">Password must contain at least 8 letters <br>(one of them must be a capital letter) and at least 1 number!</p>
+        </form>
+    </div>
+{% endblock %}

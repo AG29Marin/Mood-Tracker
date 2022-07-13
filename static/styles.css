@@ -1,0 +1,568 @@
+/* Styling the brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 800;
+    color: #2A0DCB !important;
+}
+
+/* Styling the links */
+nav .nav-link:link
+{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: black !important;
+}
+
+nav .nav-link:hover
+{
+    color: #2A0DCB !important;
+}
+
+nav .nav-link:active
+{
+    color: red !important;
+}
+
+/* Styling the log in and registration forms. Code inspiration from: https://www.youtube.com/watch?v=kRs3aTi3pzU&ab_channel=WebMaster*/
+
+.form1
+{
+    /* Center div */
+    margin: auto;
+    /* Make responsive */
+    width: 50%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: .4s;
+    background: rgba(255, 191, 0, 0.3);
+
+}
+
+.form1:hover
+{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transform: translate(0px, -8px);
+}
+
+.regTitle
+{
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 500;
+    color: #2A0DCB;
+    padding-bottom: 8px;
+}
+
+.passpar
+{
+    font-family: 'Abril Fatface', cursive;
+    padding-top: 8px;
+    color: #2A0DCB;
+}
+
+/* Styling the advice page */
+
+/* code inspiration from: https://www.youtube.com/watch?v=0L8cQ9nRtuE&ab_channel=ADesignerWhoCodes */
+.wrapper
+{
+    max-width: 800px;
+    /* Center iframe */
+    margin: 0 auto;
+}
+.frame
+{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.frame iframe
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.ttlAdvice
+{
+    font-family: 'Josefin Slab', serif;
+    color: #2A0DCB;
+    animation: AnimG 2s ease 0s 1 normal forwards;
+    padding-bottom: 30px;
+}
+
+/* animation from: https://webcode.tools/generators/css/keyframe-animation */
+@keyframes AnimG {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(30px);
+	}
+}
+
+.subtitle
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Josefin Slab', serif;
+    color: #E01C89;
+    animation: AdvAnim 2s ease 0s 1 normal forwards;
+}
+
+/* animation from: https://webcode.tools/generators/css/keyframe-animation */
+@keyframes AdvAnim {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.par
+{
+    padding-bottom: 8px;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 20px;
+}
+
+.par2
+{
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 23px;
+}
+/* Styling Homepage */
+
+section
+{
+    margin: 0;
+}
+
+.title1
+{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 80px;
+    font-family: 'Josefin Slab', serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: #2A0DCB;
+    text-shadow: 1px 1px 3px violet;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+/* All animations are from: https://webcode.tools/generators/css/keyframe-animation */
+@keyframes myAnim {
+	0% {
+		transform: translateY(300px);
+	}
+
+	100% {
+		transform: translateY(0px);
+	}
+}
+.pres
+{
+    /* Making a background image responsive */
+    background-image: url("ferris2.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black;
+
+    padding-top: 400px;
+    padding-bottom: 400px;
+}
+
+/* Styling tracker form  */
+
+.title
+{
+    font-family: 'Josefin Slab', serif;
+    color: #2A0DCB;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+    padding-bottom: 60px;
+}
+
+/* animation from: https://webcode.tools/generators/css/keyframe-animation */
+@keyframes myAnim {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(30px);
+	}
+}
+
+.form-control1
+{
+    width: 50%;
+    margin: auto;
+    padding: 15px 20px 15px 20px;
+    box-sizing: border-box;
+    border: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background: rgba(255, 191, 0, 0.3);
+    animation: Anim1 1s ease 0s 1 normal forwards;
+}
+
+/* animation from: https://webcode.tools/generators/css/keyframe-animation */
+@keyframes Anim1 {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.form-control2
+{
+    width: 50%;
+    margin: auto;
+    padding: 15px 20px 15px 20px;
+    box-sizing: border-box;
+    border: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background: rgba(255, 191, 0, 0.3);
+    animation: Anim2 1s ease 0s 1 normal forwards;
+}
+
+/* animation from: https://webcode.tools/generators/css/keyframe-animation */
+@keyframes Anim2 {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.form-control3
+{
+    width: 50%;
+    margin: auto;
+    padding: 15px 20px 15px 20px;
+    box-sizing: border-box;
+    border: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background: rgba(255, 191, 0, 0.3);
+    animation: Anim3 1s ease 0s 1 normal forwards;
+}
+
+/* animation from: https://webcode.tools/generators/css/keyframe-animation */
+@keyframes Anim3 {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.form-control4
+{
+    width: 50%;
+    margin: auto;
+    padding: 15px 20px 15px 20px;
+    box-sizing: border-box;
+    border: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background: rgba(255, 191, 0, 0.3);
+    animation: Anim4 1s ease 0s 1 normal forwards;
+}
+
+/* animation from: https://webcode.tools/generators/css/keyframe-animation */
+@keyframes Anim4 {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.form-control5
+{
+    width: 50%;
+    margin: auto;
+    padding: 15px 20px 15px 20px;
+    box-sizing: border-box;
+    border: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background: rgba(255, 191, 0, 0.3);
+    animation: Anim5 1s ease 0s 1 normal forwards;
+}
+
+/* animation from: https://webcode.tools/generators/css/keyframe-animation */
+@keyframes Anim5 {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.form-control6
+{
+    width: 50%;
+    margin: auto;
+    padding: 15px 20px 15px 20px;
+    box-sizing: border-box;
+    border: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background: rgba(255, 191, 0, 0.3);
+    animation: Anim6 1s ease 0s 1 normal forwards;
+}
+
+/* animation from: https://webcode.tools/generators/css/keyframe-animation */
+@keyframes Anim6 {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.form-control7
+{
+    width: 50%;
+    margin: auto;
+    padding: 15px 20px 15px 20px;
+    box-sizing: border-box;
+    border: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background: rgba(255, 191, 0, 0.3);
+    animation: Anim7 1s ease 0s 1 normal forwards;
+}
+
+/* animation from: https://webcode.tools/generators/css/keyframe-animation */
+@keyframes Anim7 {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.form-control8
+{
+    width: 50%;
+    margin: auto;
+    padding: 15px 20px 15px 20px;
+    box-sizing: border-box;
+    border: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background: rgba(255, 191, 0, 0.3);
+    animation: Anim8 1s ease 0s 1 normal forwards;
+}
+
+/* animation from: https://webcode.tools/generators/css/keyframe-animation */
+@keyframes Anim8 {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.form-control9
+{
+    width: 50%;
+    margin: auto;
+    padding: 15px 20px 15px 20px;
+    box-sizing: border-box;
+    border: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background: rgba(255, 191, 0, 0.3);
+    animation: Anim9 1s ease 0s 1 normal forwards;
+}
+
+/* animation from: https://webcode.tools/generators/css/keyframe-animation */
+@keyframes Anim9 {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.space
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.q
+{
+    font-family: 'Patrick Hand', cursive;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+.answ
+{
+    font-family: 'Josefin Slab', serif;
+    font-size: 20px;
+    padding-right: 8px;
+    cursor: pointer;
+    color: #E01C89;
+}
+
+.answ:hover
+{
+    color: #2A0DCB;
+}
+
+.btn
+{
+    width: 200px;
+    height: 50px;
+    margin-top: 30px;
+    box-sizing: border-box;
+    border: 10px;
+    background-color: #E01C89;
+    color: white;
+}
+
+/* Styling the graph page */
+.graphTitle
+{
+    font-family: 'Josefin Slab', serif;
+    color: #2A0DCB;
+    animation: AnimG 2s ease 0s 1 normal forwards;
+    padding-bottom: 30px;
+}
+
+/* animation from: https://webcode.tools/generators/css/keyframe-animation */
+@keyframes AnimG {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(30px);
+	}
+}
+
+.cont
+{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.chartCard
+{
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background: rgba(255, 191, 0, 0.3);
+}
+
+.adv
+{
+    font-size: 20px;
+    font-family: 'Josefin Slab', serif;
+    font-weight: bold;
+    padding-bottom: 15px;
+    color: #E01C89;
+    animation: AnimAdv 2s ease 0s 1 normal forwards;
+}
+
+/* animation from: https://webcode.tools/generators/css/keyframe-animation */
+@keyframes AnimAdv {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Styling error page */
+.contain
+{
+    background-image: url("error.jpg");
+    background-size: cover;
+    background-position: 50%;
+    color: black;
+
+    padding-top: 400px;
+    padding-bottom: 400px;
+}
+
+.err_nr
+{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: 'Josefin Slab', serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: white;
+}
+.err_msg
+{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: 'Josefin Slab', serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: white;
+}

@@ -1,0 +1,300 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Mood Track
+{% endblock %}
+
+{% block main %}
+<form action="/mood" method="post">
+    <h1 class="title">Track your mood by <br> answering this questions daily</h1>
+
+        <div class="form-control1">
+            <label class="q">
+                How is the quality of my sleep?
+            </label>
+            <br>
+            <label class="answ" for="excellent">
+                <input type="radio"
+                       id="excellent"
+                       value="excellent"
+                       name="option1">Excellent</input>
+            </label>
+            <label class="answ" for="good">
+                <input type="radio"
+                       id="good"
+                       value="good"
+                       name="option1">Good</input>
+            </label>
+            <label class="answ" for="average">
+                <input type="radio"
+                       id="average"
+                       value="average"
+                       name="option1">Average</input>
+            </label>
+            <label class="answ" for="poor">
+                <input type="radio"
+                       id="poor"
+                       value="poor"
+                       name="option1">Poor</input>
+            </label>
+        </div>
+
+        <div class="space"></div>
+        <div class="form-control2">
+            <label class="q">
+                How is my socializing with friends or other people?
+            </label>
+            <br>
+            <label class="answ" for="excellent">
+                <input type="radio"
+                       id="excellent"
+                       value="excellent"
+                       name="option2">Excellent</input>
+            </label>
+            <label class="answ" for="good">
+                <input type="radio"
+                       id="good"
+                       value="good"
+                       name="option2">Good</input>
+            </label>
+            <label class="answ" for="average">
+                <input type="radio"
+                       id="average"
+                       value="average"
+                       name="option2">Average</input>
+            </label>
+            <label class="answ" for="poor">
+                <input type="radio"
+                       id="poor"
+                       value="poor"
+                       name="option2">Poor</input>
+            </label>
+        </div>
+
+        <div class="space"></div>
+        <div class="form-control3">
+            <label class="q">
+                How is my level of calmness lately(as opossed to anxiety and worry)?
+            </label>
+            <br>
+            <label class="answ" for="excellent">
+                <input type="radio"
+                       id="excellent"
+                       value="excellent"
+                       name="option3">Excellent</input>
+            </label>
+            <label class="answ" for="good">
+                <input type="radio"
+                       id="good"
+                       value="good"
+                       name="option3">Good</input>
+            </label>
+            <label class="answ" for="average">
+                <input type="radio"
+                       id="average"
+                       value="average"
+                       name="option3">Average</input>
+            </label>
+            <label class="answ" for="poor">
+                <input type="radio"
+                       id="poor"
+                       value="poor"
+                       name="option3">Poor</input>
+            </label>
+        </div>
+
+        <div class="space"></div>
+        <div class="form-control4">
+            <label class="q">
+                How is my interest in activities and pursuits that usually held my attention?
+            </label>
+            <br>
+            <label class="answ" for="excellent">
+                <input type="radio"
+                       id="excellent"
+                       value="excellent"
+                       name="option4">Excellent</input>
+            </label>
+            <label class="answ" for="good">
+                <input type="radio"
+                       id="good"
+                       value="good"
+                       name="option4">Good</input>
+            </label>
+            <label class="answ" for="average">
+                <input type="radio"
+                       id="average"
+                       value="average"
+                       name="option4">Average</input>
+            </label>
+            <label class="answ" for="poor">
+                <input type="radio"
+                       id="poor"
+                       value="poor"
+                       name="option4">Poor</input>
+            </label>
+        </div>
+
+        <div class="space"></div>
+        <div class="form-control5">
+            <label class="q">
+                How is my level of happiness lately?
+            </label>
+            <br>
+            <label class="answ" for="excellent">
+                <input type="radio"
+                       id="excellent"
+                       value="excellent"
+                       name="option5">Excellent</input>
+            </label>
+            <label class="answ" for="good">
+                <input type="radio"
+                       id="good"
+                       value="good"
+                       name="option5">Good</input>
+            </label>
+            <label class="answ" for="average">
+                <input type="radio"
+                       id="average"
+                       value="average"
+                       name="option5">Average</input>
+            </label>
+            <label class="answ" for="poor">
+                <input type="radio"
+                       id="poor"
+                       value="poor"
+                       name="option5">Poor</input>
+            </label>
+        </div>
+
+        <div class="space"></div>
+        <div class="form-control6">
+            <label class="q">
+                How is my level of ease with myself and my surroundings?
+            </label>
+            <br>
+            <label class="answ" for="excellent">
+                <input type="radio"
+                       id="excellent"
+                       value="excellent"
+                       name="option6">Excellent</input>
+            </label>
+            <label class="answ" for="good">
+                <input type="radio"
+                       id="good"
+                       value="good"
+                       name="option6">Good</input>
+            </label>
+            <label class="answ" for="average">
+                <input type="radio"
+                       id="average"
+                       value="average"
+                       name="option6">Average</input>
+            </label>
+            <label class="answ" for="poor">
+                <input type="radio"
+                       id="poor"
+                       value="poor"
+                       name="option6">Poor</input>
+            </label>
+        </div>
+
+        <div class="space"></div>
+        <div class="form-control7">
+            <label class="q">
+                How is my ability to concentrate?
+            </label>
+            <br>
+            <label class="answ" for="excellent">
+                <input type="radio"
+                       id="excellent"
+                       value="excellent"
+                       name="option7">Excellent</input>
+            </label>
+            <label class="answ" for="good">
+                <input type="radio"
+                       id="good"
+                       value="good"
+                       name="option7">Good</input>
+            </label>
+            <label class="answ" for="average">
+                <input type="radio"
+                       id="average"
+                       value="average"
+                       name="option7">Average</input>
+            </label>
+            <label class="answ" for="poor">
+                <input type="radio"
+                       id="poor"
+                       value="poor"
+                       name="option7">Poor</input>
+            </label>
+        </div>
+
+        <div class="space"></div>
+        <div class="form-control8">
+            <label class="q">
+                How is my fatigue resistence?
+            </label>
+            <br>
+            <label class="answ" for="excellent">
+                <input type="radio"
+                       id="excellent"
+                       value="excellent"
+                       name="option8">Excellent</input>
+            </label>
+            <label class="answ" for="good">
+                <input type="radio"
+                       id="good"
+                       value="good"
+                       name="option8">Good</input>
+            </label>
+            <label class="answ" for="average">
+                <input type="radio"
+                       id="average"
+                       value="average"
+                       name="option8">Average</input>
+            </label>
+            <label class="answ" for="poor">
+                <input type="radio"
+                       id="poor"
+                       value="poor"
+                       name="option8">Poor</input>
+            </label>
+        </div>
+
+        <div class="space"></div>
+        <div class="form-control9">
+            <label class="q">
+                How is my appetite recently?
+            </label>
+            <br>
+            <label class="answ" for="excellent">
+                <input type="radio"
+                       id="excellent"
+                       value="excellent"
+                       name="option9">Excellent</input>
+            </label>
+            <label class="answ" for="good">
+                <input type="radio"
+                       id="good"
+                       value="good"
+                       name="option9">Good</input>
+            </label>
+            <label class="answ" for="average">
+                <input type="radio"
+                       id="average"
+                       value="average"
+                       name="option9">Average</input>
+            </label>
+            <label class="answ" for="poor">
+                <input type="radio"
+                       id="poor"
+                       value="poor"
+                       name="option9">Poor</input>
+            </label>
+        </div>
+
+        <button class="btn" type="submit" value="submit">Submit</button>
+</form>
+{% endblock %}
