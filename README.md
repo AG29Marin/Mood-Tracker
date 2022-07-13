@@ -1,5 +1,4 @@
 # MOOD TRACKER
-#### Video Demo: <https://youtu.be/VVWydV7Iz8M>
 #### Description: Web app that keeps track of your mood created with Flask and SQL
 
 ## Table of contents
