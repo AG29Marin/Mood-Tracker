@@ -4,19 +4,22 @@
     Log In
 {% endblock %}
 
-<!-- Form base from CS50 Finance -->
-
 {% block main %}
-<div class="form1">
-    <h3 class="regTitle">Log In</h3>
-    <form action="/login" method="post">
-      <div class="mb-3">
-          <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
-      </div>
-      <div class="mb-3">
-          <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
-      </div>
-      <button class="btn btn-primary" type="submit">Log In</button>
-    </form>
-</div>
+    <section class="reg-log">
+        <div class="form-wrap">
+            <h3 class="regTitle">Log In</h3>
+            <form class="form-reg" action="/login" method="post">
+                <label class="name">
+                    Username
+                </label>
+                <input autocomplete="off" autofocus class="name-input" id="username" name="username" placeholder="Username" type="text" required>
+                <label class="password">
+                    Password
+                </label>
+                <input class="pass-input" id="password" name="password" placeholder="Password" type="password" required>
+                <p>If you don't already have an account, <a href="/register">REGISTER HERE.</a></p>
+                <button class="cta" type="submit">LogIn</button>
+            </form>
+        </div>
+    </section>
 {% endblock %}

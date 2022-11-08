@@ -4,26 +4,30 @@
     Register
 {% endblock %}
 
-<!-- Form base from CS50 Finance -->
-
 {% block main %}
-    <div class="form1">
-        <h3 class="regTitle">Register</h3>
-        <form action="/register" method="post">
-            <div class="mb-3">
-                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
-            </div>
-            <div class="mb-3">
-                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="email" name="email" placeholder="Email" type="email">
-            </div>
-            <div class="mb-3">
-                <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
-            </div>
-            <div class="mb-3">
-                <input class="form-control mx-auto w-auto" id="confPassword" name="confirm" placeholder="Confirm-Password" type="password">
-            </div>
-            <button class="btn btn-primary" type="submit">Register</button>
-            <p class="passpar">Password must contain at least 8 letters <br>(one of them must be a capital letter) and at least 1 number!</p>
-        </form>
-    </div>
+    <section class="reg-log">
+        <div class="form-wrap">
+            <h3 class="regTitle">Register</h3>
+            <form class="form-reg" action="/register" method="post">
+                <label class="name">
+                    Username
+                </label>
+                <input autocomplete="off" autofocus class="name-input" id="username" name="username" placeholder="Username" type="text" required>
+                <label class="email">
+                    Email
+                </label>
+                <input autocomplete="off" autofocus class="email-input" id="email" name="email" placeholder="Email" type="email" required>
+                <label class="password">
+                    Password
+                </label>
+                <input class="pass-input" id="password" name="password" placeholder="Password" type="password" required>
+                <label class="confirm">
+                    Confirm password
+                </label>
+                <input class="conf-input" id="confPassword" name="confirm" placeholder="Confirm-Password" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                <button class="cta" type="submit">Register</button>
+            </form>
+        </div>
+    </section>
 {% endblock %}

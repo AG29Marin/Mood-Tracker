@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block main %}
+<section class="graph">
         <h1 class="graphTitle">My Mood In Time</h1>
-        <h3>{{ score }}</h3>
         <h5 class="adv">Go to ADVICE for improving or mantaining <br> your current emotional state</h5>
         <!-- Code from: https://www.chartjs3.com/docs/chart/getting-started/ -->
         <div class="cont">
@@ -28,6 +28,7 @@
               // Styling the graph
               fill: true,
               backgroundColor: [
+                '#2499A680',
                 'rgba(255, 26, 104, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(255, 206, 86, 0.2)',
@@ -45,7 +46,7 @@
                 'rgba(255, 159, 64, 1)',
                 'rgba(0, 0, 0, 1)'
               ],
-              borderWidth: 1
+              borderWidth: 1.5
             }]
           };
 
@@ -70,4 +71,5 @@
           );
           </script>
         </div>
+</section>
 {% endblock %}

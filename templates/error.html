@@ -5,8 +5,11 @@
 {% endblock %}
 
 {% block main %}
-    <div class="contain">
-        <h3 class="err_nr">{{ code }}</h3>
-        <h3 class="err_msg">{{ message }}</h3>
-    </div>
+    <section class="error-container">
+        <div class="corgi-wrapper">
+            <img src="./static/error-page.jpg" alt="picture of a corgi dog">
+            <h3 class="err-nr">{{ code }}</h3>
+            <h3 class="err-msg">{{ message }}</h3>
+        </div>
+    </section>
 {% endblock %}

@@ -1,4 +1,5 @@
 import re
+import os
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
@@ -21,7 +22,12 @@ Session(app)
 
 # Configure CS50 Library to use SQLite database from: CS50 finance
 
-db = SQL("sqlite:///mood.db")
+#db = SQL("sqlite:///mood.db")
+
+uri = os.getenv("DATABASE_URL")
+if uri.startswith("postgres://qszzqwqlolsjdz:00bfaa225eb84e60ab689eeefeb0ef5637fa7d018503168605e63a326d83f873@ec2-54-77-40-202.eu-west-1.compute.amazonaws.com:5432/d5vnsnmdjj7n00"):
+    uri = uri.replace("postgres://qszzqwqlolsjdz:00bfaa225eb84e60ab689eeefeb0ef5637fa7d018503168605e63a326d83f873@ec2-54-77-40-202.eu-west-1.compute.amazonaws.com:5432/d5vnsnmdjj7n00", "postgresql://qszzqwqlolsjdz:00bfaa225eb84e60ab689eeefeb0ef5637fa7d018503168605e63a326d83f873@ec2-54-77-40-202.eu-west-1.compute.amazonaws.com:5432/d5vnsnmdjj7n00")
+db = SQL(uri)
 
 ''' Making sure responses are no-cache. More info at: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
 code from: https://stackoverflow.com/questions/34066804/disabling-caching-in-flask '''
@@ -73,9 +79,9 @@ def graph():
         row = row["info"]
         if row == 0 and row <= 9:
             score = "POOR"
-        elif row > 9 and row <= 27:
+        elif row >= 9 and row <= 27:
             score = "AVERAGE"
-        elif row > 27 and row < 45:
+        elif row >= 27 and row < 45:
             score = "GOOD"
         else:
             score = "EXCELLENT"
@@ -84,7 +90,7 @@ def graph():
     flash("My mood is " + score + "! I've got " + str(row) + " out of 45. ")
 
     # Render graph
-    return render_template("graph.html", label=label, value=value)
+    return render_template("graph.html", label=label, value=value, score=score)
 
 @app.route("/mood", methods=["GET", "POST"])
 @login_required
@@ -137,7 +143,7 @@ def mood():
         response1 = 'excellent' #45
         response2 = 'good' #27
         response3 = 'average' #9
-        #response4 = 'poor' #0
+        response4 = 'poor' #0
 
         # Counting the score
         for item in options:
@@ -147,8 +153,8 @@ def mood():
                 counter += 3
             elif item == response3:
                 counter += 1
-            else:
-                counter = 0
+            elif item == response4:
+                counter += 0
 
         # Creating tracking table:
         '''CREATE TABLE 'tracking' ('id' INTEGER PRIMARY KEY NOT NULL,

@@ -1,69 +1,178 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --nav-color: #2499A6;
+    --brand-color: #F78104;
+    --button-color: #faab36;
+    --title-color: #F2C299;
+    --title-font: 'Lora', serif;
+    --subtitle-font: 'Open Sans', sans-serif;;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+/* Styling navbar */
+li, a, button {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 10%;
+    width: auto;
+    height: 100%;
+    background-color: var(--nav-color);
+}
 /* Styling the brand */
-nav .navbar-brand
+.navbar-brand
 {
-    font-size: xx-large;
+    font-size: 2.5em;
     font-family: 'Abril Fatface', cursive;
     font-weight: 800;
-    color: #2A0DCB !important;
+    color: var(--brand-color);
+    text-shadow: 1px 1px 1px #000f;
 }
 
-/* Styling the links */
-nav .nav-link:link
-{
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: black !important;
+.nav-list {
+    list-style: none;
 }
 
-nav .nav-link:hover
-{
-    color: #2A0DCB !important;
+.nav-list li {
+    display: inline-block;
+    padding: 0px 20px;
 }
 
-nav .nav-link:active
-{
-    color: red !important;
+.nav-list li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-list li a:hover {
+    color: var(--button-color);
+}
+
+button {
+    padding: 9px 25px;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin: 5px 0px 5px 0px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
 }
 
 /* Styling the log in and registration forms. Code inspiration from: https://www.youtube.com/watch?v=kRs3aTi3pzU&ab_channel=WebMaster*/
 
-.form1
+.reg-log {
+    height: 85.2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-wrap
 {
     /* Center div */
     margin: auto;
     /* Make responsive */
-    width: 50%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    min-width: 35%;
+    height: auto;
+    padding: 20px 20px;
     box-sizing: border-box;
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     transition: .4s;
-    background: rgba(255, 191, 0, 0.3);
-
+    background:  #faab36 100%;
 }
 
-.form1:hover
+.form-wrap:hover
 {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     transform: translate(0px, -8px);
 }
 
-.regTitle
-{
-    font-family: 'Abril Fatface', cursive;
-    font-weight: 500;
-    color: #2A0DCB;
-    padding-bottom: 8px;
+.form-reg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-.passpar
+.form-reg label {
+    padding: 10px;
+    font-size: 1em;
+    font-family: var(--subtitle-font);
+    font-weight: 800;
+    text-align: center;
+}
+
+.form-reg input {
+    padding: 10px;
+    font-size: 1em;
+    margin: 0 10px;
+    border: none;
+    border-radius: 20px;
+}
+
+.form-reg p {
+    margin-top: 5px;
+    font-size: 1em;
+    font-family: var(--subtitle-font);
+    text-align: center;
+}
+
+.form-reg p a {
+    font-size: 1em;
+    font-family: var(--subtitle-font);
+    color: var(--nav-color);
+}
+
+.form-reg p a:hover {
+    color: #000;
+}
+
+.form-reg button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 1em;
+    width: 35%;
+    margin: 25px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--nav-color);
+    transition: all 0.3s ease 0s;
+}
+
+.form-reg button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+.regTitle
 {
-    font-family: 'Abril Fatface', cursive;
-    padding-top: 8px;
-    color: #2A0DCB;
+    font-family: var(--title-font);
+    font-weight: 800;
+    font-size: 2em;
+    text-align: center;
+    color: var(--nav-color);
+    padding-bottom: 8px;
 }
 
 /* Styling the advice page */
@@ -80,6 +189,7 @@ nav .nav-link:active
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
+    margin-bottom: 25px;
 }
 
 .frame iframe
@@ -94,10 +204,13 @@ nav .nav-link:active
 
 .ttlAdvice
 {
-    font-family: 'Josefin Slab', serif;
-    color: #2A0DCB;
+    font-family: var(--title-font);
+    font-size: 2em;
+    color: #000;
     animation: AnimG 2s ease 0s 1 normal forwards;
+    margin-top: 50px;
     padding-bottom: 30px;
+    text-align: center;
 }
 
 /* animation from: https://webcode.tools/generators/css/keyframe-animation */
@@ -115,9 +228,11 @@ nav .nav-link:active
 {
     padding-top: 20px;
     padding-bottom: 20px;
-    font-family: 'Josefin Slab', serif;
-    color: #E01C89;
+    font-family: var(--subtitle-font);
+    font-size: 1.5em;
+    color: var(--nav-color);
     animation: AdvAnim 2s ease 0s 1 normal forwards;
+    text-align: center;
 }
 
 /* animation from: https://webcode.tools/generators/css/keyframe-animation */
@@ -136,70 +251,107 @@ nav .nav-link:active
 .par
 {
     padding-bottom: 8px;
-    font-family: 'Abril Fatface', cursive;
-    font-size: 20px;
+    color: var(--button-color);
+    font-family: var(--subtitle-font);
+    font-size: 1.2em;
+    font-weight: 800;
+    text-align: center
 }
 
 .par2
 {
     padding-bottom: 30px;
     padding-top: 30px;
-    font-family: 'Abril Fatface', cursive;
-    font-size: 23px;
+    color: var(--button-color);
+    font-family: var(--subtitle-font);
+    font-size: 1.2em;
+    font-weight: 800;
+    text-align: center;
 }
 /* Styling Homepage */
 
-section
-{
-    margin: 0;
-}
-
-.title1
-{
+.hero-image {
+    background-image: linear-gradient(90deg, rgba(217,187,169, 0.5) 0%, rgba(176,198,217, 0.3) 100%), url('ferris4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85.2vh;
+    overflow: hidden;
     display: flex;
-    justify-content: flex-start;
-    padding-left: 80px;
-    font-family: 'Josefin Slab', serif;
-    font-size: 50px;
-    font-weight: 500;
-    color: #2A0DCB;
-    text-shadow: 1px 1px 3px violet;
-    animation: myAnim 2s ease 0s 1 normal forwards;
+    justify-content: center;
+    align-items: center;
 }
 
-/* All animations are from: https://webcode.tools/generators/css/keyframe-animation */
-@keyframes myAnim {
+.title-container {
+    text-align: center;
+}
+
+#top
+{
+    font-family: var(--title-font);
+    font-size: 4em;
+    font-weight: 500;
+    color: #000;
+    text-shadow: 1px 1px 1px #fff;
+    animation: slide 2s ease 0s 1 normal forwards;
+
+}
+
+.subtitle1 {
+    margin: 15px 0px;
+    font-family: var(--subtitle-font);
+    font-size: 1.5em;
+    font-weight: 500;
+    animation: AnimAdv 2s ease 0s 1 normal forwards;
+}
+
+@keyframes slide {
 	0% {
-		transform: translateY(300px);
+		transform: translateY(0);
 	}
 
 	100% {
-		transform: translateY(0px);
+		transform: translateY(20px);
 	}
 }
-.pres
-{
-    /* Making a background image responsive */
-    background-image: url("ferris2.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: black;
 
-    padding-top: 400px;
-    padding-bottom: 400px;
-}
 
 /* Styling tracker form  */
 
+.tracker {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper
+{
+    /* Center div */
+    margin: auto;
+    /* Make responsive */
+    width: 75%;
+    height: auto;
+}
+
+.tracker-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 .title
 {
-    font-family: 'Josefin Slab', serif;
-    color: #2A0DCB;
+    font-family: var(--title-font);
+    font-size: 2em;
+    color: #000;
     animation: myAnim 2s ease 0s 1 normal forwards;
     padding-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
+
 
 /* animation from: https://webcode.tools/generators/css/keyframe-animation */
 @keyframes myAnim {
@@ -214,14 +366,16 @@ section
 
 .form-control1
 {
-    width: 50%;
+    width: 75%;
+    height: 100%;
     margin: auto;
     padding: 15px 20px 15px 20px;
     box-sizing: border-box;
-    border: 20px;
+    border-radius: 20px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    background: rgba(255, 191, 0, 0.3);
+    background: #faab3690;
     animation: Anim1 1s ease 0s 1 normal forwards;
+    text-align: center;
 }
 
 /* animation from: https://webcode.tools/generators/css/keyframe-animation */
@@ -239,14 +393,16 @@ section
 
 .form-control2
 {
-    width: 50%;
+    width: 75%;
+    height: 100%;
     margin: auto;
     padding: 15px 20px 15px 20px;
     box-sizing: border-box;
-    border: 20px;
+    border-radius: 20px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    background: rgba(255, 191, 0, 0.3);
+    background: #faab3690;
     animation: Anim2 1s ease 0s 1 normal forwards;
+    text-align: center;
 }
 
 /* animation from: https://webcode.tools/generators/css/keyframe-animation */
@@ -262,200 +418,28 @@ section
 	}
 }
 
-.form-control3
-{
-    width: 50%;
-    margin: auto;
-    padding: 15px 20px 15px 20px;
-    box-sizing: border-box;
-    border: 20px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    background: rgba(255, 191, 0, 0.3);
-    animation: Anim3 1s ease 0s 1 normal forwards;
-}
-
-/* animation from: https://webcode.tools/generators/css/keyframe-animation */
-@keyframes Anim3 {
-	0% {
-		opacity: 0;
-		transform: translateX(250px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-.form-control4
-{
-    width: 50%;
-    margin: auto;
-    padding: 15px 20px 15px 20px;
-    box-sizing: border-box;
-    border: 20px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    background: rgba(255, 191, 0, 0.3);
-    animation: Anim4 1s ease 0s 1 normal forwards;
-}
-
-/* animation from: https://webcode.tools/generators/css/keyframe-animation */
-@keyframes Anim4 {
-	0% {
-		opacity: 0;
-		transform: translateX(-250px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-.form-control5
-{
-    width: 50%;
-    margin: auto;
-    padding: 15px 20px 15px 20px;
-    box-sizing: border-box;
-    border: 20px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    background: rgba(255, 191, 0, 0.3);
-    animation: Anim5 1s ease 0s 1 normal forwards;
-}
-
-/* animation from: https://webcode.tools/generators/css/keyframe-animation */
-@keyframes Anim5 {
-	0% {
-		opacity: 0;
-		transform: translateX(250px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-.form-control6
-{
-    width: 50%;
-    margin: auto;
-    padding: 15px 20px 15px 20px;
-    box-sizing: border-box;
-    border: 20px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    background: rgba(255, 191, 0, 0.3);
-    animation: Anim6 1s ease 0s 1 normal forwards;
-}
-
-/* animation from: https://webcode.tools/generators/css/keyframe-animation */
-@keyframes Anim6 {
-	0% {
-		opacity: 0;
-		transform: translateX(-250px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-.form-control7
-{
-    width: 50%;
-    margin: auto;
-    padding: 15px 20px 15px 20px;
-    box-sizing: border-box;
-    border: 20px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    background: rgba(255, 191, 0, 0.3);
-    animation: Anim7 1s ease 0s 1 normal forwards;
-}
-
-/* animation from: https://webcode.tools/generators/css/keyframe-animation */
-@keyframes Anim7 {
-	0% {
-		opacity: 0;
-		transform: translateX(250px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-.form-control8
-{
-    width: 50%;
-    margin: auto;
-    padding: 15px 20px 15px 20px;
-    box-sizing: border-box;
-    border: 20px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    background: rgba(255, 191, 0, 0.3);
-    animation: Anim8 1s ease 0s 1 normal forwards;
-}
-
-/* animation from: https://webcode.tools/generators/css/keyframe-animation */
-@keyframes Anim8 {
-	0% {
-		opacity: 0;
-		transform: translateX(-250px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-.form-control9
-{
-    width: 50%;
-    margin: auto;
-    padding: 15px 20px 15px 20px;
-    box-sizing: border-box;
-    border: 20px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    background: rgba(255, 191, 0, 0.3);
-    animation: Anim9 1s ease 0s 1 normal forwards;
-}
-
-/* animation from: https://webcode.tools/generators/css/keyframe-animation */
-@keyframes Anim9 {
-	0% {
-		opacity: 0;
-		transform: translateX(250px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
 .space
 {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .q
 {
-    font-family: 'Patrick Hand', cursive;
+    font-family: var(--subtitle-font);
     font-size: 25px;
-    padding-bottom: 10px;
 }
+
 .answ
 {
-    font-family: 'Josefin Slab', serif;
+    font-family: var(--subtitle-font);
+    font-weight: 600;
     font-size: 20px;
     padding-right: 8px;
+    padding-top: 15px;
     cursor: pointer;
-    color: #E01C89;
+    color: var(--nav-color);
+    display: inline-block;
 }
 
 .answ:hover
@@ -463,24 +447,35 @@ section
     color: #2A0DCB;
 }
 
-.btn
+.tracker-form button
 {
-    width: 200px;
-    height: 50px;
-    margin-top: 30px;
-    box-sizing: border-box;
-    border: 10px;
-    background-color: #E01C89;
-    color: white;
+    font-size: 1em;
+    font-family: 'Ubuntu', sans-serif;
+    width: 30%;
+    border-radius: 20px;
+    background-color: var(--nav-color);
+    margin: 25px auto;
 }
 
 /* Styling the graph page */
+.graph {
+    height: 85.2vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .graphTitle
 {
-    font-family: 'Josefin Slab', serif;
-    color: #2A0DCB;
+    font-family: var(--title-font);
+    color: #000;
     animation: AnimG 2s ease 0s 1 normal forwards;
     padding-bottom: 30px;
+    font-size: 50px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* animation from: https://webcode.tools/generators/css/keyframe-animation */
@@ -490,42 +485,55 @@ section
 	}
 
 	100% {
-		transform: translateY(30px);
+		transform: translateY(15px);
 	}
 }
 
 .cont
 {
-    max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
 }
+
 .chartCard
 {
-    margin: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    min-width: 300px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
     box-sizing: border-box;
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    background: rgba(255, 191, 0, 0.3);
+    background: #faab3680;
 }
-
 .adv
 {
     font-size: 20px;
-    font-family: 'Josefin Slab', serif;
+    font-family: var(--subtitle-font);
     font-weight: bold;
     padding-bottom: 15px;
-    color: #E01C89;
+    color: var(--nav-color);
     animation: AnimAdv 2s ease 0s 1 normal forwards;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.alert {
+    background-color: var(--button-color);
+    font-family: var(--subtitle-font);
+    font-weight: 800;
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
 }
 
 /* animation from: https://webcode.tools/generators/css/keyframe-animation */
 @keyframes AnimAdv {
 	0% {
 		opacity: 0;
-		transform: translateY(50px);
+		transform: translateY(20px);
 	}
 
 	100% {
@@ -535,34 +543,60 @@ section
 }
 
 /* Styling error page */
-.contain
+.error-container
 {
-    background-image: url("error.jpg");
-    background-size: cover;
-    background-position: 50%;
-    color: black;
-
-    padding-top: 400px;
-    padding-bottom: 400px;
+    height: 85.2vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.corgi-wrapper {
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.err_nr
+.corgi-wrapper img {
+    width: 50vw;
+    height: auto;
+}
+.err-nr
 {
     display: flex;
     justify-content: center;
-    margin: 0 auto;
-    font-family: 'Josefin Slab', serif;
-    font-size: 50px;
+    margin-top: 15px;
+    font-family: var(--title-font);
+    font-size: 3em;
     font-weight: 500;
-    color: white;
+    color: #000;
+    text-align: center;
 }
-.err_msg
+.err-msg
 {
     display: flex;
     justify-content: center;
-    margin: 0 auto;
-    font-family: 'Josefin Slab', serif;
-    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: var(--title-font);
+    font-size: 2em;
     font-weight: 500;
-    color: white;
+    color: #000;
+    text-align: center;
+}
+/* Styling footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--nav-color);
+}
+
+footer p {
+    font-family: cursive;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #000;
 }

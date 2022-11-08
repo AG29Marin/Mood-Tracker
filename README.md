@@ -1,5 +1,5 @@
 # MOOD TRACKER
-#### Video Demo: <https://youtu.be/VVWydV7Iz8M>
+#### Link: <https://mood-tracker-web-app.herokuapp.com/>
 #### Description: Web app that keeps track of your mood created with Flask and SQL
 
 ## Table of contents
@@ -42,15 +42,15 @@ Contains 2 functions. One is for the login requirment and the second is for gene
 ### Templates
 Contains 8 templates:
 
-The HTML *layout* template contains the Bootstrap navbar and the basic html layout of the web app.
+The HTML *layout* template contains the navbar and the basic html layout of the web app.
 
 The HTML *error* template contains the 400 error message using Jinja.
 
 The HTML *home* template contains the title of the web app and the image used for the presentation.
 
-The HTML *register* template contains a Bootstrap form that asks the user for input on username, email, password, and password confirmation. The password has to be at least 8 letters long, has at least one uppercase letter, and at least one number.
+The HTML *register* template contains a form that asks the user for input on username, email, password, and password confirmation. The password has to be at least 8 letters long, has at least one uppercase letter, and at least one number.
 
-The HTML *login* template contains also a Bootstrap form that asks the user for input on username and password.
+The HTML *login* template contains also a form that asks the user for input on username and password.
 
 The HTML *mood_track* template contains the form with questions that the user has to answer. Based on the answers, the *mood* function will make a score that will be inserted into the database. There are 9 questions in total and the type of input is radio.
 
@@ -73,7 +73,6 @@ Project is created with:
 * CSS3
 * JavaScript
 * Jinja2
-* Bootstrap5
 
 ## Sources
 ### For app.py:
@@ -114,5 +113,4 @@ Styling the log in and registration forms. Code inspiration from: https://www.yo
 Styling the advice page. Code inspiration from: https://www.youtube.com/watch?v=0L8cQ9nRtuE&ab_channel=ADesignerWhoCodes;
 
 All animations are from: https://webcode.tools/generators/css/keyframe-animation.
-
 
